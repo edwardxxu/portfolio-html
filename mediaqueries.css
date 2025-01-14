@@ -6,3 +6,128 @@
         display: flex;
     }
 }
+
+/* ABOUT */
+@media screen and (max-width: 1200px) {
+    .about-containers {
+        gap: 1.5rem;
+    }
+    
+    .section__pic-container {
+        height: 350px;
+        width: 350px;
+    }
+
+    .about-pic {
+        border-radius: 1.75rem;
+    }
+
+    .arrow {
+        right: -3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-details-containers {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .section__pic-container {
+        height: 300px;
+        width: 300px;
+    }
+
+    .about-pic {
+        border-radius: 1.5rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-container {
+        gap: 2rem;
+    }
+
+    .about-containers {
+        margin-top: 1rem;
+    }
+
+    .details-container {
+        padding: 1.2rem;
+    }
+
+    .section__pic-container {
+        height: 250px;
+        width: 250px;
+    }
+
+    .about-pic {
+        border-radius: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-containers {
+        margin: 1rem 0;
+    }
+
+    .section__pic-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    .about-pic {
+        border-radius: 1rem;
+    }
+
+    .details-container {
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .section__pic-container {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+/* PORTFOLIO */
+@media screen and (max-width: 1200px) {
+    .color-container {
+        width: calc(50% - 2rem); /* Two projects per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .color-container {
+        width: 100%; /* One project per row on small screens */
+    }
+}
+
+/* CONTACT */
+@media (max-width: 768px) {
+    .contact-section {
+        min-height: 50vh;
+        margin: 1rem auto;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-links {
+        padding: 1.5rem;
+    }
+}

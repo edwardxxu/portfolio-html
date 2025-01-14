@@ -9,7 +9,7 @@
 
 body {
     font-family: "Merriweather", serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
       } ;
 
@@ -213,11 +213,27 @@ section {
     gap: 1rem;
 }
 
+.project-img {
+    cursor: pointer;
+    transition: all 300ms ease;
+    border: 2px solid transparent;
+}
+
+.project-img:hover {
+    transform: scale(1.02);
+    border-color: rgb(163, 163, 163);
+}
+
 /* ICONS */
 
-.icon{
+.icon {
     cursor: pointer;
     height: 2rem;
+    transition: all 300ms ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
 }
 
 .btn-container{
@@ -258,21 +274,182 @@ section {
     border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-/* BACKGROUND*/
-
-body {
-    /* Fallback solid color for older browsers */
-    background: hsla(189, 100%, 85%, 1);
-    
-    background: linear-gradient(
-        180deg,
-        hsla(189, 100%, 85%, 1) 0%,
-        hsla(0, 100%, 99%, 1) 20%
-    );
+/* ABOUT SECTION */
+#about {
+    position: relative;
 }
 
-html, body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0rem;
+}
+
+.about-details-containers {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    font-size: larger;
+    
+}
+
+.about-containers,
+.about-details-containers {
+    display: flex;
+}
+
+.details-container {
+    transition: all 300ms ease;
+}
+
+.details-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgb(53, 53, 53);
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: transparent;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* PORTFOLIO SECTION */
+#portfolio {
+    position: relative;
+    padding: 4vh 0;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.color-container {
+    background: rgb(250, 250, 250);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% / 3 - 2rem);
+    min-width: 270px;
+    position: relative;
+    padding-bottom: 60px; /* Space for the button */
+    min-height: 400px; /* Set a minimum height for the container */
+    display: flex;
+    flex-direction: column;
+}
+
+.color-container {
+    transition: all 300ms ease;
+}
+
+.color-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+    border-radius: 1rem;
+    width: 90%;
+    height: auto;
+    margin: auto; /* Centers the image vertically in the remaining space */
+}
+
+.project-title {
+    margin: 1rem 0;
+    color: black;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-grow: 1; /* Allows the container to fill available space */
+}
+
+/* CONTACT */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content-wrapper {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.linkedin-btn {
+    background-color: transparent;
+    color: #0a66c2;
+    border: 2px solid #0a66c2; 
+}
+
+.linkedin-btn:hover {
+    background-color: #0a66c2;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.linkedin-btn i {
+    font-size: 1.25rem;
 }
