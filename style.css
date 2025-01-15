@@ -1,5 +1,4 @@
 /* GENERAL */
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
@@ -11,24 +10,22 @@ body {
     font-family: "Merriweather", serif;
     font-weight: 500;
     font-style: normal;
-      } ;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
 p {
-    color: rgb(85, 85, 85)
+    color: rgb(85, 85, 85);
 }
 
 /* TRANSITION */
-
-am .btn {
-    transition: all 300ms ease
+.btn {
+    transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
-
 nav, 
 .nav-links {
     display: flex;
@@ -38,46 +35,46 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
- }
+}
 
- .nav-links {
+.nav-links {
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
- }
+}
 
- a {
+a {
     color: black;
     text-decoration: none;
     text-decoration-color: white;
- }
+}
 
- a:hover {
+a:hover {
     color: grey;
     text-decoration: underline;
     text-underline-offset: 0.75rem;
-    text-decoration-color: rgb(181, 181, 181);}
+    text-decoration-color: rgb(181, 181, 181);
+}
 
-.logo{
+.logo {
     font-size: 2rem;
 }
 
-.logo:hover{
-    cursor:default
+.logo:hover {
+    cursor: default;
 }
 
 /* HAMBURGER MENU */
-
 #hamburger-nav {
     display: none;
 }
 
-.hamburger-menu{
+.hamburger-menu {
     position: relative;
     display: inline-block;
 }
 
-.hamburger-icon{
+.hamburger-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,7 +108,7 @@ nav {
     font-size: 1.5rem;
     color: black;
     text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -122,58 +119,72 @@ nav {
     max-height: 300px;
 }
 
-.hamburger-icon.open span:first-child{
-    transform:rotate(45deg) translate(10px, 5px);
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
-    opacity:0;
+    opacity: 0;
 }
 
 .hamburger-icon.open span:last-child {
-    transform:rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-.hamburger-icon span:first-child {
-    opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
+    transform: rotate(-45deg) translate(10px, -5px);
 }
 
 /* SECTIONS */
-
 section {
-    padding-top: 4vh;
-    height: 96vh;
+    padding: 4rem 10rem;
+    min-height: auto;
+    height: auto;
     margin: 0 10rem;
     box-sizing: border-box;
-    min-height: fit-content;
 }
 
 .section-container {
     display: flex;
+    gap: 4rem;
+    height: auto;
+    flex-wrap: wrap;
 }
 
 /* PROFILE SECTION */
-
 #profile {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
-    height: 80vh
+    height: auto;
+    padding-top: 4vh;
 }
 
 .section_pic-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 400px;
     width: 400px;
     margin: auto 0;
+}
+
+#profile .section_pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+#about .section_pic-container {
+    width: 400px;  /* Base width */
+    height: 600px; /* Height for 2:3 ratio (400 * 1.5) */
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+#about .section_pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
 }
 
 .section__text {
@@ -182,15 +193,11 @@ section {
 }
 
 .section__text_p {
-    font-weight: 600
-    
+    font-weight: 600;
 }
 
 .section__text__p1 {
     text-align: center;
-}
-
-.section__text__p1 {
     font-size: 1.75rem;
     margin-bottom: 0.1rem;
 }
@@ -213,19 +220,7 @@ section {
     gap: 1rem;
 }
 
-.project-img {
-    cursor: pointer;
-    transition: all 300ms ease;
-    border: 2px solid transparent;
-}
-
-.project-img:hover {
-    transform: scale(1.02);
-    border-color: rgb(163, 163, 163);
-}
-
 /* ICONS */
-
 .icon {
     cursor: pointer;
     height: 2rem;
@@ -236,13 +231,14 @@ section {
     transform: scale(1.1);
 }
 
-.btn-container{
+/* BUTTONS */
+.btn-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.btn{
+.btn {
     font-weight: 600;
     transition: all 300ms ease;
     padding: 1rem;
@@ -250,24 +246,29 @@ section {
     border-radius: 2rem;
 }
 
-.btn-color-1, .btn-color-2 {
+.btn-color-1,
+.btn-color-2 {
     border: rgb(53, 53, 53) 0.15rem solid;
 }
-.btn-color-1:hover, .btn-color-2:hover {
-    cursor: pointer
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
 }
 
-.btn-color-1, .btn-color-2:hover {
+.btn-color-1 {
     background: rgb(53, 53, 53);
     color: white;
 }
 
-.btn-color-1:hover {
+.btn-color-1:hover,
+.btn-color-2:hover {
     background: rgb(0, 0, 0);
+    color: white;
 }
 
 .btn-color-2 {
-    background: none
+    background: none;
 }
 
 .btn-color-2:hover {
@@ -277,20 +278,24 @@ section {
 /* ABOUT SECTION */
 #about {
     position: relative;
+    overflow: visible;
+    padding-bottom: 2rem;
 }
 
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
-    margin-top: 0rem;
+    margin-top: 0;
+    flex-wrap: wrap;
 }
 
 .about-details-containers {
+    flex: 1;
+    min-width: 300px;
     justify-content: center;
     flex-direction: column;
     display: flex;
     font-size: larger;
-    
 }
 
 .about-containers,
@@ -298,24 +303,13 @@ section {
     display: flex;
 }
 
-.details-container {
-    transition: all 300ms ease;
-}
-
-.details-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-color: rgb(53, 53, 53);
+.text-container {
+    margin-top: 1rem;
+    max-width: 100%;
 }
 
 .about-pic {
     border-radius: 2rem;
-}
-
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
 }
 
 .details-container {
@@ -326,17 +320,13 @@ section {
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+    transition: all 300ms ease;
 }
 
-.section-container {
-    gap: 4rem;
-    height: 80%;
-}
-
-.section__pic-container {
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
+.details-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: rgb(53, 53, 53);
 }
 
 /* PORTFOLIO SECTION */
@@ -359,13 +349,10 @@ section {
     width: calc(100% / 3 - 2rem);
     min-width: 270px;
     position: relative;
-    padding-bottom: 60px; /* Space for the button */
-    min-height: 400px; /* Set a minimum height for the container */
+    padding-bottom: 80px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
-}
-
-.color-container {
     transition: all 300ms ease;
 }
 
@@ -378,12 +365,21 @@ section {
     border-radius: 1rem;
     width: 90%;
     height: auto;
-    margin: auto; /* Centers the image vertically in the remaining space */
+    margin: auto;
+    cursor: pointer;
+    transition: all 300ms ease;
+    border: 2px solid transparent;
+}
+
+.project-img:hover {
+    transform: scale(1.02);
+    border-color: rgb(163, 163, 163);
 }
 
 .project-title {
     margin: 1rem 0;
     color: black;
+    padding: 0 1rem;
 }
 
 .project-btn {
@@ -400,10 +396,10 @@ section {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    flex-grow: 1; /* Allows the container to fill available space */
+    flex-grow: 1;
 }
 
-/* CONTACT */
+/* CONTACT SECTION */
 .contact-section {
     display: flex;
     justify-content: center;
@@ -411,6 +407,7 @@ section {
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: auto !important;
 }
 
 .contact-content-wrapper {
@@ -419,6 +416,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem !important;
+    margin-bottom: 0 !important;
 }
 
 .contact-title {
@@ -441,7 +440,7 @@ section {
 .linkedin-btn {
     background-color: transparent;
     color: #0a66c2;
-    border: 2px solid #0a66c2; 
+    border: 2px solid #0a66c2;
 }
 
 .linkedin-btn:hover {
@@ -452,4 +451,36 @@ section {
 
 .linkedin-btn i {
     font-size: 1.25rem;
+}
+
+/* COMPACT SECTION */
+.compact-section {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+    margin: 0 !important;
+}
+
+section + .compact-section {
+    margin-top: -2rem !important;
+}
+
+/* FOOTER */
+footer {
+    height: auto;
+    margin: 0 1rem;
+    padding: 2rem 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+.nav-links-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer .nav-links {
+    justify-content: center;
 }

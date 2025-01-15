@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadband Analysis - Edward's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .project-section {
+            min-height: 100vh;
+            padding: 2rem 10rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Gallery styles */
+        .gallery-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .gallery-item {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .gallery-item.active {
+            display: block;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            margin-top: 1rem;
+            color: rgb(85, 85, 85);
+            font-style: italic;
+            font-size: 1.1rem;
+            padding: 0 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .gallery-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(53, 53, 53, 0.8);
+            color: white;
+            padding: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            z-index: 10;
+        }
+
+        .gallery-btn:hover {
+            background: rgb(53, 53, 53);
+        }
+
+        .gallery-btn.prev {
+            left: 1rem;
+        }
+
+        .gallery-btn.next {
+            right: 1rem;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background: rgb(200, 200, 200);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background: rgb(53, 53, 53);
+        }
+
+        /* Buttons */
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: transparent;
+            border: 2px solid rgb(53, 53, 53);
+            border-radius: 2rem;
+            color: rgb(53, 53, 53);
+            text-decoration: none;
+            transition: all 300ms ease;
+        }
+
+        .back-button:hover {
+            background-color: rgb(53, 53, 53);
+            color: white;
+            text-decoration: none;
+        }
+
+        .rmarkdown-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: transparent;
+            border: 2px solid rgb(53, 53, 53);
+            border-radius: 2rem;
+            color: rgb(53, 53, 53);
+            text-decoration: none;
+            transition: all 300ms ease;
+            text-align: center;
+            margin: 1rem auto 2rem auto;
+            max-width: fit-content;
+        }
+
+        .rmarkdown-button:hover {
+            background-color: rgb(53, 53, 53);
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Standardized text styling */
+        .project-content h2 {
+            color: rgb(53, 53, 53);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content h3 {
+            color: rgb(53, 53, 53);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgb(85, 85, 85);
+            margin-bottom: 1rem;
+        }
+
+        .project-content ul {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgb(85, 85, 85);
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .project-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .methodology-section {
+            background-color: rgb(250, 250, 250);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .key-findings {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Edward Xu</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="project-section">
+        <a href="index.html#portfolio" class="back-button">← Back to Projects</a>
+        
+        <div class="project-header">
+            <h1 class="title">Mapping Broadband Connectivity Across The United States</h1>
+        </div>
+
+        <div class="project-content">
+            <div class="gallery-container">
+                <div class="gallery-item active">
+                    <img src="./assets/Internet.jpg" alt="Internet Access by County" class="gallery-image">
+                    <p class="gallery-caption">Percentage of Households with Broadband Internet Access by County (2018)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/Income.jpg" alt="Median Annual Income by County" class="gallery-image">
+                    <p class="gallery-caption">Median Annual Household Income by County (2018)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/Percent Change Internet.jpg" alt="Percent Change Internet Access 2017-2018" class="gallery-image">
+                    <p class="gallery-caption">Percent Change in Household Broadband Access (2017-2018)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/Percent Change Income.jpg" alt="Percent Change Income 2018-2019" class="gallery-image">
+                    <p class="gallery-caption">Percent Change in Median Household Income (2017-2018)</p>
+                </div>
+                <button class="gallery-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="gallery-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <a href="./assets/broadband_income.html" class="rmarkdown-button" target="_blank">View R Markdown →</a>
+
+            <div class="project-description">
+                <p>This project focused on mapping both internet access and median income by county; as well as the percent change between 2017 and 2018 in these two metrics. It found a strong positive correlation between median income and broadband access in 2018 (r = 0.742, p < 0.001), suggesting that higher-income counties tend to have higher rates of broadband access.</p>
+            </div>
+
+            <div class="methodology-section">
+                <h2>Methodology</h2>
+                <p>The analysis incorporated the following key factors:</p>
+                <ul>
+                    <li>County-level household broadband access rate 2017-2018.</li>
+                    <li>County-level median household income 2017-2018.</li>
+                    <li>Maps were created in ArcGIS Pro, and correlation calculations were conducted in RStudio.</li>
+                </ul>
+            </div>
+
+            <div class="key-findings">
+                <h3>Key Findings</h3>
+                <p>The analysis shows a strong positive correlation between median income and broadband access in 2018 (r = 0.742, p < 0.001). However, when examining year-over-year changes from 2017 to 2018, there is virtually no correlation between changes in median income and broadband access (r = 0.003, p = 0.919). This suggests that while higher-income counties tend to have better broadband access, short-term changes in income are not associated with changes in broadband access.</p>
+            </div>
+
+            <div class="project-description">
+                <h3>Tools Used</h3>
+                <p>This project utilized Geographic Information Systems (GIS) software for spatial analysis and visualization, along with custom RStudio scripts for correlation calculations. The final maps were created using ArcGIS Pro, incorporating each variable to provide a visual overview of the data.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                galleryItems.forEach(item => item.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                galleryItems[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentIndex = index;
+            }
+
+            function nextImage(e) {
+                e.preventDefault();
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                showImage(currentIndex);
+            }
+
+            function prevImage(e) {
+                e.preventDefault();
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                showImage(currentIndex);
+            }
+
+            if (prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', prevImage);
+                nextBtn.addEventListener('click', nextImage);
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showImage(index);
+                });
+            });
+
+            // Initialize first image
+            showImage(0);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
