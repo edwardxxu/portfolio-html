@@ -1,278 +1,207 @@
-/* Large Screens (max-width: 1200px) */
-@media screen and (max-width: 1200px) {
-    /* Navigation */
-    #desktop-nav {
-        display: none;
-    }
-    
-    #hamburger-nav {
-        display: flex;
-    }
-
-    /* Sections */
-    section {
-        margin: 0 5rem;
-        padding: 4rem 5rem;
-    }
-
-    /* Profile Section */
-    .section_pic-container {
-        height: 350px;
-        width: 350px;
-    }
-
-    /* About Section */
-    #about .section_pic-container {
-        width: 350px;
-        height: 525px;
-    }
-
-    .about-containers {
-        gap: 1.5rem;
-    }
-
-    .about-pic {
-        border-radius: 1.75rem;
-    }
-
-    .arrow {
-        right: -3rem;
-    }
-
-    .section-container {
-        gap: 2rem;
-    }
-
-    /* Portfolio Section */
-    .color-container {
-        width: calc(50% - 2rem);
-    }
-}
-
-/* Medium Screens (max-width: 992px) */
+/* Tablet and Small Desktop Screens (max-width: 992px) */
 @media screen and (max-width: 992px) {
-    /* Profile Section */
-    .section_pic-container {
-        height: 300px;
-        width: 300px;
+    .project-section {
+        padding: 2rem 5rem;
     }
 
-    /* About Section */
-    #about .section_pic-container {
-        width: 300px;
-        height: 450px;
+    .gallery-container {
+        max-width: 700px;
     }
 
-    .about-containers {
-        flex-direction: column;
-        align-items: center;
+    .project-content h2 {
+        font-size: 1.6rem;
     }
 
-    .about-details-containers {
-        width: 100%;
-        gap: 1rem;
+    .project-content h3 {
+        font-size: 1.4rem;
     }
 
-    .about-pic {
-        border-radius: 1.5rem;
+    .project-content p {
+        font-size: 1rem;
     }
 
-    .arrow {
-        display: none;
+    /* Project-specific button adjustments */
+    .python-notebook-button,
+    .rmarkdown-button {
+        width: auto;
+        max-width: 80%;
     }
 }
 
 /* Tablet Screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    /* General Section */
-    section {
-        margin: 0 2rem;
-        padding: 4rem 2rem;
+    .project-section {
+        padding: 2rem 3rem;
     }
 
-    /* Profile Section */
-    #profile {
-        flex-direction: column;
-        gap: 2rem;
-        padding-top: 2vh;
-    }
-
-    .section_pic-container {
-        height: 350px;
-        width: 350px;
-        margin: 0 auto;
-    }
-
-    /* About Section */
-    #about .section_pic-container {
-        width: 280px;
-        height: 420px;
-        margin: 0 auto;
-    }
-
-    .section-container {
-        gap: 2rem;
-    }
-
-    .about-containers {
-        margin-top: 1rem;
-    }
-
-    .details-container {
-        padding: 1.2rem;
-    }
-
-    /* Portfolio Section */
-    .color-container {
-        width: 100%;
-        margin: 1rem auto;
-        padding-bottom: 100px;
-    }
-
-    .project-title {
-        font-size: 1.2rem;
+    .project-header {
         margin-bottom: 2rem;
     }
 
-    .project-btn {
-        bottom: 2rem;
+    .gallery-container {
+        max-width: 600px;
+        margin: 1.5rem auto;
     }
 
-    /* Contact Section */
-    .contact-section {
-        min-height: auto;
-        margin: 1rem auto;
+    .gallery-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.8rem;
     }
 
-    .contact-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
+    .gallery-caption {
+        font-size: 1rem;
+        padding: 0 0.5rem;
     }
 
-    .contact-links {
+    .methodology-section {
         padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .project-content ul {
+        margin-left: 1.5rem;
+    }
+
+    /* Navigation adjustments */
+    #desktop-nav {
+        padding: 1rem 3rem;
     }
 }
 
 /* Mobile Screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
-    /* General */
-    section {
-        margin: 0 1rem;
-        padding: 3rem 1rem;
+    .project-section {
+        padding: 1.5rem;
+        min-height: auto;
     }
 
-    /* Profile Section */
-    #profile {
-        gap: 1.5rem;
-    }
-
-    .section_pic-container {
-        height: 280px;
-        width: 280px;
-    }
-
-    /* About Section */
-    #about .section_pic-container {
-        width: 240px;
-        height: 360px;
-    }
-
-    .about-containers {
-        margin: 1rem 0;
-    }
-
-    .about-pic {
-        border-radius: 1rem;
-    }
-
-    .details-container {
-        padding: 1rem;
-        border-radius: 1.5rem;
-    }
-
-    .section__text__p1 {
-        font-size: 1.5rem;
+    .project-header {
+        margin-bottom: 1.5rem;
     }
 
     .title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 
-    /* Portfolio Section */
-    .project-img {
-        max-width: 100%;
-        height: auto;
+    .gallery-container {
+        margin: 1rem auto;
     }
 
-    .project-title {
-        font-size: 1.25rem;
-        padding: 0 1rem;
+    .gallery-btn {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.6rem;
     }
 
-    .color-container {
-        padding-bottom: 110px;
+    .gallery-btn.prev {
+        left: 0.5rem;
     }
 
-    /* Contact Section */
-    .contact-content-wrapper {
+    .gallery-btn.next {
+        right: 0.5rem;
+    }
+
+    .gallery-caption {
+        font-size: 0.9rem;
+        margin-top: 0.75rem;
+    }
+
+    .dot {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+
+    /* Button styles for all project types */
+    .back-button,
+    .python-notebook-button,
+    .rmarkdown-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-content {
+        gap: 1.5rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .project-content ul {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-left: 1rem;
+    }
+
+    .methodology-section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    /* Navigation adjustments */
+    #desktop-nav {
         padding: 1rem;
     }
 
-    .contact-btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.9rem;
+    .nav-links {
+        gap: 1rem;
     }
 }
 
 /* Small Mobile Screens (max-width: 360px) */
 @media screen and (max-width: 360px) {
-    /* Profile Section */
-    .section_pic-container {
-        height: 250px;
-        width: 250px;
-    }
-
-    /* About Section */
-    #about .section_pic-container {
-        width: 220px;
-        height: 330px;
-    }
-
-    .section__text__p1 {
-        font-size: 1.25rem;
+    .project-section {
+        padding: 1rem;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
-    /* Portfolio Section */
-    .project-title {
-        font-size: 1.2rem;
+    .gallery-btn {
+        width: 1.8rem;
+        height: 1.8rem;
+        padding: 0.5rem;
     }
 
-    .color-container {
-        padding-bottom: 120px;
+    /* Button styles for all project types */
+    .back-button,
+    .python-notebook-button,
+    .rmarkdown-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        width: 100%;
     }
 
-    /* Contact Section */
-    .contact-title {
-        font-size: 1.5rem;
+    .project-content h2 {
+        font-size: 1.3rem;
     }
 
-    .contact-btn {
-        padding: 0.8rem;
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-content p,
+    .project-content ul {
         font-size: 0.9rem;
     }
 
-    /* Footer */
-    footer {
-        padding: 1rem 0;
-    }
-
-    footer .nav-links {
-        font-size: 1.2rem;
-        gap: 1rem;
+    /* Navigation adjustments */
+    .nav-links {
+        gap: 0.8rem;
+        font-size: 0.9rem;
     }
 }
