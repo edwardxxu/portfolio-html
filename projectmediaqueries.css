@@ -1,0 +1,217 @@
+/* Large screens (1200px and below) */
+@media screen and (max-width: 1200px) {
+    .project-section {
+        padding: 2rem 5rem;
+    }
+
+    .gallery-container {
+        max-width: 700px;
+    }
+}
+
+/* Medium screens (992px and below) */
+@media screen and (max-width: 992px) {
+    .project-section {
+        padding: 2rem 3rem;
+    }
+
+    .gallery-container {
+        max-width: 600px;
+    }
+
+    .project-title {
+        font-size: 2.2rem;
+    }
+
+    .gallery-caption {
+        font-size: 1rem;
+    }
+
+    /* Hide desktop nav and show hamburger menu */
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+    }
+
+    .methodology-section,
+    .key-findings {
+        padding: 1.5rem;
+    }
+}
+
+/* Small screens (768px and below) */
+@media screen and (max-width: 768px) {
+    .project-section {
+        padding: 1.5rem;
+    }
+
+    .gallery-container {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .gallery-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .gallery-btn.prev {
+        left: 0.5rem;
+    }
+
+    .gallery-btn.next {
+        right: 0.5rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .project-content p,
+    .project-content ul {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin: 0 0.75rem 1rem 0.75rem;
+    }
+
+    .project-content ul {
+        margin-left: 2rem;
+    }
+
+    .methodology-section,
+    .key-findings {
+        padding: 1.25rem 1rem;
+        margin: 1.5rem 0.5rem;
+    }
+
+    .python-notebook-button,
+    .rmarkdown-button,
+    .back-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Extra small screens (480px and below) */
+@media screen and (max-width: 480px) {
+    .project-section {
+        padding: 1rem 0.75rem;
+    }
+
+    .gallery-container {
+        margin: 0.75rem auto;
+    }
+
+    .gallery-caption {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+        line-height: 1.5;
+    }
+
+    .gallery-btn {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+    .dot {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+        padding: 0 0.5rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+        padding: 0 0.75rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+        padding: 0 0.75rem;
+    }
+
+    .project-content p,
+    .project-content ul {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin: 0 0.75rem 1rem 0.75rem;
+    }
+
+    .methodology-section,
+    .key-findings {
+        padding: 1.25rem 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .methodology-section p,
+    .key-findings p {
+        margin: 0 0 1rem 0;
+    }
+
+    .methodology-section ul,
+    .key-findings ul {
+        margin: 0 0 0 1.5rem;
+    }
+
+    .python-notebook-button,
+    .rmarkdown-button,
+    .back-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        margin: 1rem auto;
+    }
+}
+
+/* Extra large screens (1600px and above) */
+@media screen and (min-width: 1600px) {
+    .project-section {
+        max-width: 1400px;
+    }
+
+    .gallery-container {
+        max-width: 1000px;
+    }
+
+    .project-content {
+        gap: 2.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .project-content h2 {
+        font-size: 2rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .project-content p,
+    .project-content ul {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
